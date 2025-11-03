@@ -27,6 +27,13 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        options: [akwazi-prod, development]
+        required: true
+
+
   
 defaults:
   run:
